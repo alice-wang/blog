@@ -4,6 +4,14 @@
 </p>
 
 <p>
+  <% if @article.photo.exists? %>
+    <%= image_tag @article.photo.url(:medium) %>
+  <% end %>
+</p>
+
+<p>
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+
+<%= link_to 'Back', articles_path %>
