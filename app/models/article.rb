@@ -6,4 +6,5 @@ class Article < ActiveRecord::Base
                     :path => ":rails_root/public/assets/articles/:id/:style/:basename.:extension"
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
+
 end
